@@ -58,6 +58,22 @@
   .parking-p { width: 32px; height: 32px; border-radius: 8px; background: var(--floral); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; font-weight: 500; flex-shrink: 0; }
   .parking-title { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 0.3rem; }
   .parking-desc { font-size: 13px; color: var(--mid); line-height: 1.8; }
+
+  /* 마음전하실곳 */
+  .account-group { margin-bottom: 1.25rem; }
+  .account-group-title { font-family: 'Noto Serif KR', serif; font-size: 14px; color: var(--mid); margin-bottom: 0.625rem; padding-left: 0.25rem; }
+  .account-card { background: var(--white); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 2px 12px rgba(139,107,74,0.04); }
+  .account-item { display: flex; align-items: center; justify-content: space-between; padding: 0.875rem 1.25rem; border-bottom: 1px solid var(--border); gap: 12px; }
+  .account-item:last-child { border-bottom: none; }
+  .account-left { display: flex; flex-direction: column; gap: 3px; }
+  .account-relation { font-size: 11px; color: var(--light); letter-spacing: 0.05em; }
+  .account-name { font-size: 14px; font-weight: 500; color: var(--text); }
+  .account-bank { font-size: 12px; color: var(--mid); }
+  .account-number { font-size: 13px; color: var(--mid); letter-spacing: 0.03em; }
+  .copy-account-btn { flex-shrink: 0; font-size: 12px; color: var(--accent); background: var(--accent-bg); border: none; border-radius: 8px; padding: 6px 12px; cursor: pointer; font-family: 'Noto Sans KR', sans-serif; white-space: nowrap; transition: background 0.15s; }
+  .copy-account-btn:hover { background: #EBE0D4; }
+  .copy-account-btn.copied { color: #5A9A6A; background: #EAF4ED; }
+
   .divider { width: 100%; height: 1px; background: var(--border); margin: 2rem 0; }
   .qr-section { text-align: center; padding: 1rem 0 0.5rem; }
   .qr-wrap { display: inline-block; background: var(--white); border-radius: 20px; padding: 1rem; border: 1px solid var(--border); margin-bottom: 0.75rem; }
@@ -81,6 +97,7 @@
   <div class="petal-row">✿ ✿ ✿</div>
 </div>
 <div class="container">
+
   <div class="section">
     <div class="section-label">예식 장소</div>
     <div class="venue-card">
@@ -90,6 +107,7 @@
       <a class="map-btn" href="https://map.naver.com/v5/search/전주+기린대로+800+더메이호텔" target="_blank">📍 네이버 지도에서 보기</a>
     </div>
   </div>
+
   <div class="section">
     <div class="section-label">교통 안내</div>
     <div class="tabs">
@@ -116,11 +134,12 @@
         </div>
         <div class="route-item">
           <div class="route-head"><div class="route-icon">🛣</div><div class="route-title">고속도로 이용 시</div></div>
-          <div class="route-desc">호남고속도로 → <strong>전주 IC</strong> 또는 <strong>전주북 IC</strong> 하차<br>이후 기린대로 방면으로 진입</div>
+          <div class="route-desc">호남고속도로 → <strong>전주 IC</strong> 또는 <strong>전주북 IC</strong> 하차<br>이후 기린대로 방면으로 진입 (전주 IC에서 약 10분)</div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="section">
     <div class="section-label">주차 안내</div>
     <div class="parking-card">
@@ -131,17 +150,91 @@
       </div>
     </div>
   </div>
+
+  <div class="section">
+    <div class="section-label">마음 전하실 곳</div>
+
+    <div class="account-group">
+      <div class="account-group-title">신랑측 💐</div>
+      <div class="account-card">
+        <div class="account-item">
+          <div class="account-left">
+            <span class="account-relation">부</span>
+            <span class="account-name">전종기</span>
+            <span class="account-bank">농협</span>
+            <span class="account-number">639-02-108238</span>
+          </div>
+          <button class="copy-account-btn" onclick="copyAccount(this, '639-02-108238')">복사</button>
+        </div>
+        <div class="account-item">
+          <div class="account-left">
+            <span class="account-relation">모</span>
+            <span class="account-name">장영자</span>
+            <span class="account-bank">농협</span>
+            <span class="account-number">601-21-00511</span>
+          </div>
+          <button class="copy-account-btn" onclick="copyAccount(this, '601-21-00511')">복사</button>
+        </div>
+        <div class="account-item">
+          <div class="account-left">
+            <span class="account-relation">신랑</span>
+            <span class="account-name">전지원</span>
+            <span class="account-bank">신한</span>
+            <span class="account-number">110-615069-246</span>
+          </div>
+          <button class="copy-account-btn" onclick="copyAccount(this, '110-615069-246')">복사</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="account-group">
+      <div class="account-group-title">신부측 🌸</div>
+      <div class="account-card">
+        <div class="account-item">
+          <div class="account-left">
+            <span class="account-relation">부</span>
+            <span class="account-name">주병후</span>
+            <span class="account-bank">신한</span>
+            <span class="account-number">503-04-498042</span>
+          </div>
+          <button class="copy-account-btn" onclick="copyAccount(this, '503-04-498042')">복사</button>
+        </div>
+        <div class="account-item">
+          <div class="account-left">
+            <span class="account-relation">모</span>
+            <span class="account-name">한지은</span>
+            <span class="account-bank">농협</span>
+            <span class="account-number">352-0817-4628-23</span>
+          </div>
+          <button class="copy-account-btn" onclick="copyAccount(this, '352-0817-4628-23')">복사</button>
+        </div>
+        <div class="account-item">
+          <div class="account-left">
+            <span class="account-relation">신부</span>
+            <span class="account-name">주리아</span>
+            <span class="account-bank">전북은행</span>
+            <span class="account-number">1021-01-3627354</span>
+          </div>
+          <button class="copy-account-btn" onclick="copyAccount(this, '1021-01-3627354')">복사</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="divider"></div>
+
   <div class="qr-section">
     <div class="qr-wrap"><canvas id="qr-canvas" width="160" height="160"></canvas></div>
     <div class="qr-label">이 페이지를 QR로 공유하세요</div>
     <button class="copy-btn" onclick="copyLink()">🔗 링크 복사</button>
   </div>
 </div>
+
 <div class="footer">
   <div class="footer-flowers">✿ ✿ ✿</div>
   두 사람의 새 출발을 함께 축하해 주세요<br>2026 · 10 · 03
 </div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 function switchTab(type, btn) {
@@ -149,6 +242,16 @@ function switchTab(type, btn) {
   document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('tab-' + type).classList.add('active');
+}
+function copyAccount(btn, number) {
+  navigator.clipboard.writeText(number).then(() => {
+    btn.textContent = '✓ 복사됨';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = '복사';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
 }
 function copyLink() {
   const url = window.location.href;

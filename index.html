@@ -102,6 +102,24 @@
   .footer { text-align: center; padding: 2.5rem 1.5rem 3rem; font-size: 12px; color: var(--light); line-height: 2; border-top: 1px solid var(--border); }
   .footer-flowers { font-size: 16px; margin-bottom: 0.5rem; opacity: 0.5; letter-spacing: 0.2em; }
 
+  /* D-DAY */
+  .dday-section { text-align: center; padding: 3rem 1.25rem 2rem; max-width: 480px; margin: 0 auto; }
+  .dday-label { font-size: 10px; letter-spacing: 0.22em; color: var(--floral); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .dday-title { font-family: 'Noto Serif KR', serif; font-size: 15px; color: var(--text); margin-bottom: 1.5rem; letter-spacing: 0.05em; }
+  .dday-title span { color: var(--accent); }
+  .dday-counters { display: flex; justify-content: center; gap: 12px; }
+  .dday-unit { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .dday-circle { width: 68px; height: 68px; border-radius: 50%; background: var(--accent-bg); display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 500; color: var(--accent); font-family: 'Noto Serif KR', serif; }
+  .dday-unit-label { font-size: 11px; color: var(--light); letter-spacing: 0.1em; }
+
+  /* MAP */
+  .map-section { padding: 0 1.25rem 3rem; max-width: 480px; margin: 0 auto; }
+  .map-wrap { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); box-shadow: 0 2px 12px rgba(139,107,74,0.05); }
+  .map-wrap iframe { width: 100%; height: 220px; display: block; border: none; }
+  .map-btns { display: flex; gap: 8px; margin-top: 12px; }
+  .map-btn-item { flex: 1; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 8px; border-radius: 10px; border: 1px solid var(--border); background: var(--white); font-size: 13px; color: var(--mid); text-decoration: none; font-family: 'Noto Sans KR', sans-serif; transition: background 0.15s; }
+  .map-btn-item:hover { background: var(--accent-bg); }
+
   /* FADE IN */
   .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .fade-in.visible { opacity: 1; transform: translateY(0); }
@@ -159,7 +177,7 @@
     <div class="gallery-slide"><img src="06.jpg" alt="" draggable="false"></div>
     <div class="gallery-slide"><img src="07.jpg" alt="" draggable="false"></div>
     <div class="gallery-slide"><img src="08.jpg" alt="" draggable="false"></div>
-    <div class="gallery-slide"><img src="09 10.jpg" alt="" draggable="false"></div>
+    <div class="gallery-slide"><img src="0910.jpg" alt="" draggable="false"></div>
     <div class="gallery-slide"><img src="11.jpg" alt="" draggable="false"></div>
     <div class="gallery-slide"><img src="12.jpg" alt="" draggable="false"></div>
     <div class="gallery-slide"><img src="13.jpg" alt="" draggable="false"></div>
@@ -168,7 +186,7 @@
     <div class="gallery-slide"><img src="16.jpg" alt="" draggable="false"></div>
     <div class="gallery-slide"><img src="17.jpg" alt="" draggable="false"></div>
     <div class="gallery-slide"><img src="18.jpg" alt="" draggable="false"></div>
-    <div class="gallery-slide"><img src="19 20.jpg" alt="" draggable="false"></div>
+    <div class="gallery-slide"><img src="1920.jpg" alt="" draggable="false"></div>
     <div class="gallery-slide"><img src="21.jpg" alt="" draggable="false"></div>
     <div class="gallery-slide"><img src="22.jpg" alt="" draggable="false"></div>
     <div class="gallery-slide"><img src="23.jpg" alt="" draggable="false"></div>
@@ -183,6 +201,32 @@
     <div class="gallery-slide"><img src="32.jpg" alt="" draggable="false"></div>
   </div>
   <div class="gallery-dots" id="dots"></div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- D-DAY 카운터 -->
+<div class="dday-section fade-in">
+  <div class="dday-label">D-Day</div>
+  <div class="dday-title">전지원 <span>♥</span> 주리아 결혼식까지</div>
+  <div class="dday-counters">
+    <div class="dday-unit">
+      <div class="dday-circle" id="dd-days">-</div>
+      <div class="dday-unit-label">Days</div>
+    </div>
+    <div class="dday-unit">
+      <div class="dday-circle" id="dd-hours">-</div>
+      <div class="dday-unit-label">Hours</div>
+    </div>
+    <div class="dday-unit">
+      <div class="dday-circle" id="dd-minutes">-</div>
+      <div class="dday-unit-label">Minutes</div>
+    </div>
+    <div class="dday-unit">
+      <div class="dday-circle" id="dd-seconds">-</div>
+      <div class="dday-unit-label">Seconds</div>
+    </div>
+  </div>
 </div>
 
 <div class="section-divider"></div>
@@ -202,9 +246,25 @@
     </div>
     <div class="date-info">
       <strong>2026년 10월 3일 토요일</strong><br>
-      더메이 호텔 · 오후 12시 50분<br>
+      더메이 호텔 마제스틱 볼룸 · 오후 12시 50분<br>
       전북특별자치도 전주시 덕진구 기린대로 800
     </div>
+  </div>
+</div>
+
+<!-- 지도 -->
+<div class="map-section fade-in">
+  <div class="map-wrap">
+    <iframe
+      src="https://map.naver.com/v5/embed/place/37559427"
+      title="더메이 호텔 지도"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <div class="map-btns">
+    <a class="map-btn-item" href="https://map.naver.com/v5/search/전주+기린대로+800+더메이호텔" target="_blank">🗺 네이버지도</a>
+    <a class="map-btn-item" href="https://map.kakao.com/link/search/전주+더메이호텔" target="_blank">🟡 카카오내비</a>
+    <a class="map-btn-item" href="https://tmap.life/search?keyword=전주+더메이호텔" target="_blank">🔵 티맵</a>
   </div>
 </div>
 
@@ -256,6 +316,30 @@
 </div>
 
 <script>
+// D-DAY 카운터
+function updateDday() {
+  const wedding = new Date('2026-10-03T12:50:00+09:00');
+  const now = new Date();
+  const diff = wedding - now;
+  if (diff <= 0) {
+    document.getElementById('dd-days').textContent = '0';
+    document.getElementById('dd-hours').textContent = '0';
+    document.getElementById('dd-minutes').textContent = '0';
+    document.getElementById('dd-seconds').textContent = '0';
+    return;
+  }
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  document.getElementById('dd-days').textContent = days;
+  document.getElementById('dd-hours').textContent = hours;
+  document.getElementById('dd-minutes').textContent = minutes;
+  document.getElementById('dd-seconds').textContent = seconds;
+}
+updateDday();
+setInterval(updateDday, 1000);
+
 const slider = document.getElementById('gallery');
 const dotsWrap = document.getElementById('dots');
 const slides = slider.querySelectorAll('.gallery-slide');
